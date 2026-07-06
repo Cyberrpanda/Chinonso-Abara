@@ -1,0 +1,57 @@
+/* Custom styles */
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Fade-in animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(15px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.animate-fade-in {
+  animation: fadeIn 0.8s ease-out forwards;
+}
+.animate-fade-in-up {
+  animation: fadeIn 0.8s ease-out 0.2s both;
+}
+
+/* Chip style for competencies and tech skills */
+.chip {
+  display: inline-block;
+  background-color: #f0fdfa; /* teal-50 */
+  color: #0f766e; /* teal-700 */
+  border: 1px solid #ccfbf1; /* teal-100 */
+  font-size: 0.75rem;
+  font-weight: 500;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  transition: all 0.2s ease;
+}
+.chip:hover {
+  background-color: #0f766e;
+  color: white;
+  border-color: #0f766e;
+}
+
+/* Experience card initial state for JS */
+.experience-card {
+  will-change: opacity, transform;
+}
+
+/* Mobile menu transition */
+#mobile-menu {
+  transition: max-height 0.3s ease-out;
+  max-height: 0;
+  overflow: hidden;
+}
+#mobile-menu:not(.hidden) {
+  max-height: 400px;
+}
+
+/* Hover effect enhancement for competency/tech cards */
+.competency-card:hover,
+.bg-white.border.border-gray-200.rounded-xl.p-6.shadow-sm:hover {
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.08), 0 8px 10px -6px rgba(0, 0, 0, 0.05);
+  border-color: #0f766e;
+}
